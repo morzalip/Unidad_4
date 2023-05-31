@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Presiona enter para poner la pagina color negro</h1>
+    <h1>presiona ctrl + enter para que la pagina sea color rojo</h1>
 </body>
+<script>
+    window.addEventListener("keydown", function(e){
+        if(e.key == "enter"){
+            document.body.style.backgroundColor = "black";
+        }
+
+        if(e.key == "enter" && e.ctrlKey){
+            document.body.style.backgroundColor = "red";
+        }
+
+    });
+
+    window.addEventListener("keyup", function(e){
+        if(e.key == "enter"){
+            document.body.style.backgroun = "";
+        }
+        });
+</script>
 </html>
